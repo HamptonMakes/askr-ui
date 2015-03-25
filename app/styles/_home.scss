@@ -1,5 +1,6 @@
 body {
   font-family: sans-serif;
+  text-align: center;
 }
 
 h1, h2, h3, h4 {
@@ -7,7 +8,6 @@ h1, h2, h3, h4 {
   display: inline-block;
   position: relative;
   &:after {
-    background: $blue;
     content: "";
     display: inline-block;
     height: 0.2em;
@@ -16,4 +16,12 @@ h1, h2, h3, h4 {
       top: 1em;
     width: 100%;
   }
+}
+
+h1:after {
+  background: $blue;
+}
+
+h2:after {
+  // background: $olive;
 }
