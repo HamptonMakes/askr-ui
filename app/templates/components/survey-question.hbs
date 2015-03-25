@@ -1,0 +1,26 @@
+<h3 class="question">
+  {{question.content}}
+</h3>
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      {{#each year in question.yearsAsked}}
+        <th>{{year}}</th>
+      {{/each}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each answer in question.answers}}
+      <tr>
+        <td>{{answer.content}}</td>
+
+        {{#each summary in answer.yearSummaryAnswers}}
+          <td>
+            {{answer-summary summary=summary}}
+          </td>
+        {{/each}}
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

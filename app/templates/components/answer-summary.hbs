@@ -1,0 +1,13 @@
+{{#if summary.percentageThisYear}}
+  <div class="percent">{{roundedPercentageThisYear}}</div>
+  {{#if summary.changeFromLastYear}}
+    <span {{bind-attr class=":change isPositive:pos:neg"}}>
+      {{roundedChangeFromLastYear}}
+    </span>
+  {{/if}}
+{{else}}
+  <div class="percent not-asked">N/A</div>
+{{/if}}
+
+
+<div class="bar-chart" {{bind-attr style="barHeight"}}> </div>

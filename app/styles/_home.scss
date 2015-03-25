@@ -1,27 +1,77 @@
 body {
   font-family: sans-serif;
-  text-align: center;
 }
 
 h1, h2, h3, h4 {
   color: $slate;
   display: inline-block;
+}
+
+h2 {
+  border-bottom: 7px solid $blue;
+}
+
+h3 {
+  border-bottom: 4px solid $yellow;
+}
+
+table {
+  border: 1px solid $blue;
+  border-radius: 2px;
+  table-layout: fixed;
+}
+
+thead {
+  text-align: left;
+}
+
+td {
+  border: 1px solid $light-blue;
+  border-radius: 2px;
+  padding: 0px;
   position: relative;
-  &:after {
-    content: "";
-    display: inline-block;
-    height: 0.2em;
-    position: absolute;
-      left: 0px;
-      top: 1em;
-    width: 100%;
+  width: 100px;
+}
+
+.category {
+  text-align: center;
+}
+
+.percent {
+  display: inline-block;
+  margin: 10px 5px;
+}
+
+.change {
+  font-size: 12px;
+  margin-left: 10px;
+  &:before {
+    font-size: 8px;
+  }
+  &.pos {
+    color: darken($olive, 25%);
+    &:before {
+      content: "▲";
+    }
+  }
+  &.neg {
+    color: $red;
+    &:before {
+      content: "▼";
+    }
   }
 }
 
-h1:after {
-  background: $blue;
+.not-asked {
+  opacity: 0.2;
 }
 
-h2:after {
-  // background: $olive;
+
+.bar-chart {
+  background: $olive;
+  border-radius: 0px 0px 2px 2px;
+  opacity: 0.2;
+  position: absolute;
+    bottom: 0px;
+  width: 100%;
 }
