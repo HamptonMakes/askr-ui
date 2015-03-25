@@ -1,3 +1,13 @@
 @import "globals/variables";
 
 @import "home";
+
+// Coming soon splash
+.coming-soon {
+  margin: auto;
+  max-width: 600px;
+  text-align: center;
+  h2 {
+    font-size: 40px;
+  }
+}

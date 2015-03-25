@@ -1,8 +1,0 @@
-{{model.name}}
-
-{{#each year in model.years}}
-  <p>Questions first asked in: {{year.year}}</p>
-  {{#each question in year.questions}}
-    {{survey-question question=question}}
-  {{/each}}
-{{/each}}
