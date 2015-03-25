@@ -1,0 +1,19 @@
+body {
+  font-family: sans-serif;
+}
+
+h1, h2, h3, h4 {
+  color: $slate;
+  display: inline-block;
+  position: relative;
+  &:after {
+    background: $blue;
+    content: "";
+    display: inline-block;
+    height: 0.2em;
+    position: absolute;
+      left: 0px;
+      top: 1em;
+    width: 100%;
+  }
+}
