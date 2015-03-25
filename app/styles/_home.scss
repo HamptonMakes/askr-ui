@@ -49,7 +49,7 @@ td {
     }
   }
   &.neg {
-    color: red;
+    color: $red;
     &:before {
       content: "▼";
     }
