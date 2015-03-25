@@ -8,6 +8,10 @@ export default Ember.Component.extend({
     return (this.get("summary.changeFromLastYear") > 0);
   }.property("summary.changeFromLastYear"),
 
+  barHeight: function() {
+    return ("height:" + this.get("summary.percentageThisYear") + "%");
+  }.property("summary.percentageThisYear"),
+
   roundedChangeFromLastYear: function() {
     return (Math.round(this.get("summary.changeFromLastYear") * 10) / 10)
   }.property("summary.changeFromLastYear"),

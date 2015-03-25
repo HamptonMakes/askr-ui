@@ -28,7 +28,8 @@ thead {
 td {
   border: 1px solid $light-blue;
   border-radius: 2px;
-  padding: 5px 5px;
+  padding: 0px;
+  position: relative;
   width: 100px;
 }
 
@@ -63,4 +64,14 @@ td {
 
 .not-asked {
   opacity: 0.2;
+}
+
+
+.bar-chart {
+  background: $olive;
+  border-radius: 0px 0px 2px 2px;
+  opacity: 0.2;
+  position: absolute;
+    bottom: 0px;
+  width: 100%;
 }
