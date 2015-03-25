@@ -1,0 +1,10 @@
+{{#if summary.percentageThisYear}}
+  {{summary.percentageThisYear}}
+  {{#if summary.changeFromLastYear}}
+    <span {{bind-attr class=":change isPositive:pos:neg"}}>
+      {{summary.changeFromLastYear}}
+    </span>
+  {{/if}}
+{{else}}
+  <span class="not-asked">N/A</span>
+{{/if}}
