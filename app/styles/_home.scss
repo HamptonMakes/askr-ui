@@ -3,9 +3,16 @@ body {
 }
 
 h1, h2, h3, h4 {
-  border-bottom: 7px solid $blue;
   color: $slate;
   display: inline-block;
+}
+
+h2 {
+  border-bottom: 7px solid $blue;
+}
+
+h3 {
+  border-bottom: 4px solid $olive;
 }
 
 table {
