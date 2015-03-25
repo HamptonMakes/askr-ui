@@ -3,17 +3,48 @@ body {
 }
 
 h1, h2, h3, h4 {
+  border-bottom: 7px solid $blue;
   color: $slate;
   display: inline-block;
-  position: relative;
-  &:after {
-    background: $blue;
-    content: "";
-    display: inline-block;
-    height: 0.2em;
-    position: absolute;
-      left: 0px;
-      top: 1em;
-    width: 100%;
+}
+
+table {
+  border: 1px solid $blue;
+  border-radius: 2px;
+  table-layout: fixed;
+}
+
+thead {
+  text-align: left;
+}
+
+td {
+  border: 1px solid $light-blue;
+  border-radius: 2px;
+  padding: 5px 5px;
+  width: 100px;
+}
+
+.category {
+  text-align: center;
+}
+
+.change {
+  font-size: 12px;
+  margin-left: 10px;
+  &:before {
+    font-size: 8px;
+  }
+  &.pos {
+    color: green;
+    &:before {
+      content: "▲";
+    }
+  }
+  &.neg {
+    color: red;
+    &:before {
+      content: "▼";
+    }
   }
 }
