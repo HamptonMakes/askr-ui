@@ -1,8 +1,10 @@
-<h3 class="question">
-  {{question.content}}
-</h3>
+<div class="question" {{action "toggleResults"}}>
+  <span {{bind-attr class=":expand showYearlyResults:open:closed"}}></span>
+  <h3>
+    {{question.content}}
+  </h3>
+</div>
 {{#if showYearlyResults}}
-  <button {{action 'toggleResults'}}>Hide Results</button>
   <table>
     <thead>
       <tr>
@@ -27,5 +29,5 @@
     </tbody>
   </table>
 {{else}}
-  <button {{action 'toggleResults'}}>Show Results</button>
+  <!-- <button {{action 'toggleResults'}}>Show Results</button> -->
 {{/if}}
