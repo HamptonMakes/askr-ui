@@ -1,7 +1,9 @@
 <h1> {{model.name}} Survey Results </h1>
 
+<p>These are the results from <a href="http://twitter.com/hcatlin" target="_blank">Hampton's</a> Ruby Survey from 2008 to 2015. Figures are percentage of respondants, and that value is reflected in the background to each cell. The smaller figures are year-over-year change.</p>
+
 {{#each year in model.years}}
-  <p class="when-asked">Questions first asked in: {{year.year}}</p>
+  <h2>Questions first asked in: {{year.year}}</h2>
   {{#each question in year.questions}}
     {{survey-question question=question}}
   {{/each}}
