@@ -1,0 +1,40 @@
+.category {
+  text-align: center;
+}
+
+.percent {
+  margin: 10px 5px;
+}
+
+.change {
+  font-size: 12px;
+  &:before {
+    font-size: 8px;
+  }
+  &.pos {
+    color: darken($olive, 25%);
+    &:before {
+      content: "▲";
+    }
+  }
+  &.neg {
+    color: $red;
+    &:before {
+      content: "▼";
+    }
+  }
+}
+
+.not-asked {
+  opacity: 0.2;
+}
+
+
+.bar-chart {
+  background: $olive;
+  border-radius: 0px 0px 2px 2px;
+  opacity: 0.2;
+  position: absolute;
+    bottom: 0px;
+  width: 100%;
+}

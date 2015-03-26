@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.content {
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+h1, h2, h3, h4 {
+  color: $slate;
+  display: inline-block;
+}
+
+h2 {
+  border-bottom: 6px solid $blue;
+  margin-bottom: 10px;
+}
+
+h3 {
+  border-bottom: 4px solid $yellow;
+}
+
+h4 {
+  border-bottom: 4px solid $olive;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+a {
+  @include transition;
+  color: darken($blue, 10%);
+  &:hover {
+    color: $slate;
+  }
+}
+
+table {
+  border: 1px solid $blue;
+  border-radius: 2px;
+  margin-bottom: 20px;
+  table-layout: fixed;
+  text-align: center;
+}
+
+
+td {
+  border: 1px solid $light-blue;
+  border-radius: 2px;
+  padding: 0px;
+  position: relative;
+  width: 100px;
+}
