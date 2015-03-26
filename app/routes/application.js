@@ -1,4 +1,5 @@
 import Ember from 'ember';
+import ENV from '../config/environment.js';
 /* global ga */
 
 export default Ember.Route.extend({
