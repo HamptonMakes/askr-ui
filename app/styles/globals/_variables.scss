@@ -13,3 +13,9 @@ $slate: #454A52;
        -o-transition: $type $time ease;
           transition: $type $time ease;
 }
+
+@mixin rotate($deg) {
+  -webkit-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}

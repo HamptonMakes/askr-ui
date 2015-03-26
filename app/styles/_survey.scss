@@ -1,3 +1,36 @@
+.question {
+  cursor: pointer;
+  position: relative;
+}
+
+.expand {
+  position:absolute;
+  left: -25px;
+  top: 17px;
+  &:before, &:after {
+    @include transition();
+    background: $olive;
+    border-radius: 1px;
+    content: "";
+    display: inline-block;
+    position: absolute;
+  }
+  &:before {
+    height: 14px;
+    left: 6px;
+    top: 2px;
+    width: 2px;
+  }
+  &:after {
+    height: 2px;
+    top: 8px;
+    width: 15px;
+  }
+  &.open:before, &.open:after {
+    @include rotate(45deg);
+  }
+}
+
 .category {
   text-align: center;
 }
@@ -28,7 +61,6 @@
 .not-asked {
   opacity: 0.2;
 }
-
 
 .bar-chart {
   background: $olive;
