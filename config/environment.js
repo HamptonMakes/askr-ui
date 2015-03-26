@@ -49,7 +49,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-
+    ENV.apiHost = 'http://api.askr.me';
+    ENV.contentSecurityPolicy['connect-src'] += " http://api.askr.me";
   }
 
   return ENV;
