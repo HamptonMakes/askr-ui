@@ -22,8 +22,9 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com",
+      'script-src': "'self' 'unsafe-inline' https://www.google-analytics.com http://platform.twitter.com/widgets.js",
       'font-src': "'self'",
+      'frame-src': "'self' http://platform.twitter.com",
       'connect-src': "'self' http://api.ruby-survey.com",
       'img-src': "'self' https://stats.g.doubleclick.net https://www.google-analytics.com",
       'style-src': "'self' 'unsafe-inline'",
