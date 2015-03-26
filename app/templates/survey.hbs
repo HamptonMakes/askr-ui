@@ -1,7 +1,7 @@
 <h1> {{model.name}} Survey Results </h1>
 
 {{#each year in model.years}}
-  <p>Questions first asked in: {{year.year}}</p>
+  <p class="when-asked">Questions first asked in: {{year.year}}</p>
   {{#each question in year.questions}}
     {{survey-question question=question}}
   {{/each}}
