@@ -1,9 +1,11 @@
+<a {{bind-attr name=question.id}} />
 <div class="question" {{action "toggleResults"}}>
   <span {{bind-attr class=":expand showYearlyResults:open:closed"}}></span>
   <h3>
     {{question.content}}
   </h3>
 </div>
+<a {{bind-attr href="permalink"}}>Link</a>
 {{#if showYearlyResults}}
   <table>
     <thead>
