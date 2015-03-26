@@ -1,6 +1,20 @@
 <h1> {{model.name}} Survey Results </h1>
 
-<p>These are the results from <a href="http://twitter.com/hcatlin" target="_blank">Hampton's</a> Ruby Survey from 2008 to 2015. Figures are percentage of respondants, and that value is reflected in the background to each cell. The smaller figures are year-over-year change.</p>
+<p>
+  These are the 2015 results from what was originally called
+  "Hampton's Ruby Survey" in 2008. Figures are percentage of respondants,
+  and that value is reflected in the background to each cell. The smaller
+  figures are year-over-year change. The first questions listed are the
+  oldest and have been asked year over year.
+</p>
+
+<p>
+  Made with Ember, Rails, and love by the
+  <a href="http://www.teamrarebit.com">rarebit</a> team,
+  <a href="http://twitter.com/hcatlin" target="_blank">Hampton</a>
+  and <a href="http://twitter.com/malrase" target="_blank">Michael</a>.
+  This is an <a href="http://github.com/teamrarebit" target="_blank">open source project.</a>
+</p>
 
 {{#each year in model.years}}
   <h2>Questions first asked in: {{year.year}}</h2>
