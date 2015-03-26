@@ -1,6 +1,8 @@
 .question {
   cursor: pointer;
+  display: inline-block;
   position: relative;
+  margin-right: 5px;
 }
 
 .expand {
@@ -29,6 +31,10 @@
   &.open:before, &.open:after {
     @include rotate(45deg);
   }
+}
+
+.ion-link {
+  font-size: 18px;
 }
 
 .category {
