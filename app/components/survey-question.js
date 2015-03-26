@@ -6,10 +6,10 @@ export default Ember.Component.extend({
   showYearlyResults: false,
   init: function() {
     this._super();
-    if(window.top.location.hash === ("#" + this.get("question.id"))) {
+    if(window.location.hash === ("#" + this.get("question.id"))) {
       this.set("showYearlyResults", true);
     }
-  }.observes("question"),
+  },
   permalink: function() {
     var loc = window.location;
     return (loc.origin + loc.pathname + "#" + this.get("question.id"));
