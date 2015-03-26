@@ -1,0 +1,39 @@
+@-webkit-keyframes spin1 {
+  0% {
+    @include rotate(0deg);
+  }
+  100% {
+    @include rotate(360deg);
+  }
+}
+
+@keyframes spin1 {
+  0% {
+    @include rotate(0deg);
+  }
+  100% {
+    @include rotate(360deg);
+  }
+}
+
+.wrap{
+  position:absolute;
+  left:50%;
+  width:5em;
+  height:5em;
+  top:20%;
+  transform: translate(-50%,-50%);
+}
+
+.loader{
+  transition: all 0.7s ease-in-out;
+  border: 10px solid #ebebeb;
+  border-bottom-color:$blue;
+  width: 75%;
+  height: 75%;
+  border-radius:50%;
+  -webkit-font-smoothing: antialiased !important;
+  margin: 30px 0px;
+  -webkit-animation: spin1 0.8s linear infinite;
+  animation: spin1 0.8s linear infinite;
+}
