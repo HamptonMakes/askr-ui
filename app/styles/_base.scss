@@ -71,11 +71,17 @@ form {
     }
   }
   input[type="submit"] {
+    @include transition();
     background: #FFF;
     border: 4px solid $blue;
     border-radius: 2px;
+    color: $slate;
     cursor: pointer;
     font-size: 16px;
     padding: 5px 10px;
+    &:hover {
+      background: $blue;
+      color: #FFF;
+    }
   }
 }
