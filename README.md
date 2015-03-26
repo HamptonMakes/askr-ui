@@ -1,7 +1,9 @@
-# Ui
+# Askr UI
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This is the front end for the newest version of Askr. It originally
+started as "Hampton's Ruby Survey" in 2008, and has been open sourced
+and shared now.
+
 
 ## Prerequisites
 
@@ -50,4 +52,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
