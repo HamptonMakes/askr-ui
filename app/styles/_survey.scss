@@ -6,9 +6,6 @@
 }
 
 .expand {
-  position:absolute;
-  left: -25px;
-  top: 17px;
   &:before, &:after {
     @include transition();
     background: $olive;
@@ -19,22 +16,49 @@
   }
   &:before {
     height: 14px;
-    left: 6px;
-    top: 2px;
     width: 2px;
   }
   &:after {
     height: 2px;
-    top: 8px;
     width: 15px;
   }
   &.open:before, &.open:after {
     @include rotate(45deg);
   }
+  @media screen and (min-width: 700px) {
+    position: absolute;
+    left: -25px;
+    top: 17px;
+    &:before {
+      left: 6px;
+      top: 2px;
+    }
+    &:after {
+      top: 8px;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    display: inline-block;
+    width: 20px;
+    &:before {
+      left: 6px;
+      top: 21px;
+    }
+    &:after {
+      top: 27px;
+    }
+  }
 }
-
+h3 {
+  @media screen and (max-width: 700px) {
+    width: calc(100% - 26px);
+  }
+}
 .ion-link {
   font-size: 18px;
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
 }
 
 .category {

@@ -60,14 +60,14 @@ form {
   margin: 10px 0px;
   input[type="email"] {
     font-size: 16px;
-    margin-left: 5px;
+    margin-bottom: 10px;
     padding: 5px;
     width: 350px;
   }
   .clear {
     @media screen and (min-width: 500px) {
       float:right;
-      margin-top: -33px;
+      margin-top: -44px;
     }
   }
   input[type="submit"] {
