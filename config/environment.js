@@ -50,8 +50,8 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.apiHost = 'http://api.askr.me';
-    ENV.contentSecurityPolicy['connect-src'] += " http://api.askr.me";
+    ENV.apiHost = 'https://askrme.herokuapp.com';
+    ENV.contentSecurityPolicy['connect-src'] += " https://askrme.herokuapp.com";
   }
 
   return ENV;
