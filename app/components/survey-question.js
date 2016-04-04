@@ -4,12 +4,12 @@ import layout from '../templates/components/survey-question';
 export default Ember.Component.extend({
   layout: layout,
   showYearlyResults: false,
-  init: function() {
-    this._super();
-    if(window.location.hash === ("#" + this.get("question.id"))) {
+  checkHash: function() {
+    var id = this.get("question.id")
+    if(window.location.hash === ("#" + id)) {
       this.set("showYearlyResults", true);
     }
-  },
+  }.on('didInsertElement'),
   permalink: function() {
     var loc = window.location;
     return (loc.origin + loc.pathname + "#" + this.get("question.id"));
