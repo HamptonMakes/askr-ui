@@ -1,65 +1,23 @@
-.question {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  margin-right: 5px;
+.survey-questions.slds-tree_container {
+  max-width: 100%;
+}
+
+.survey-question {
+  margin-bottom: 20px;
+  h3 {
+    padding-top: 8px;
+    padding-bottom: 6px;
+  }
 }
 
 .expand {
-  &:before, &:after {
-    @include transition();
-    background: $olive;
-    border-radius: 1px;
-    content: "";
-    display: inline-block;
-    position: absolute;
-  }
-  &:before {
-    height: 14px;
-    width: 2px;
-  }
-  &:after {
-    height: 2px;
-    width: 15px;
-  }
-  &.open:before, &.open:after {
-    @include rotate(45deg);
-  }
-  @media screen and (min-width: 700px) {
-    position: absolute;
-    left: -25px;
-    top: 17px;
-    &:before {
-      left: 6px;
-      top: 2px;
-    }
-    &:after {
-      top: 8px;
-    }
-  }
-  @media screen and (max-width: 700px) {
-    display: inline-block;
-    width: 20px;
-    &:before {
-      left: 6px;
-      top: 21px;
-    }
-    &:after {
-      top: 27px;
-    }
+  transition: .2s transform ease-in-out;
+  &.open {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
   }
 }
-h3 {
-  @media screen and (max-width: 700px) {
-    width: calc(100% - 26px);
-  }
-}
-.ion-link {
-  font-size: 18px;
-  @media screen and (max-width: 700px) {
-    display: none;
-  }
-}
+
 
 .category {
   text-align: center;
