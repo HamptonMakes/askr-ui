@@ -5,14 +5,7 @@ $red: #92140C;
 $light-blue: #CDE6F5;
 $blue: #8DA7BE;
 $slate: #454A52;
-
-@mixin transition($time: 0.3s, $type: all) {
-  -webkit-transition: $type $time ease;
-     -moz-transition: $type $time ease;
-      -ms-transition: $type $time ease;
-       -o-transition: $type $time ease;
-          transition: $type $time ease;
-}
+$black: darken($slate, 20%);
 
 @mixin rotate($deg) {
   -webkit-transform: rotate($deg);
