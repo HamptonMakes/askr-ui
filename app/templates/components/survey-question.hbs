@@ -1,28 +1,36 @@
 <a {{bind-attr name=question.id}} />
-<div class="question" {{action "toggleResults"}}>
-  <span {{bind-attr class=":expand showYearlyResults:open:closed"}}></span>
-  <h3>
-    {{question.content}}
-  </h3>
+
+<div class="slds-tree__item" {{action "toggleResults"}}>
+  <button class="slds-button slds-m-right--x-small" aria-controls="tree0-node1">
+    <svg aria-hidden="true" {{bind-attr class=":expand showYearlyResults:open:closed :slds-button__icon :slds-button__icon--small"}}>
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#chevronright"></use>
+    </svg>
+    <span class="slds-assistive-text">Toggle</span>
+  </button>
+  <h3 role="presentation" class="slds-text-heading--small">{{question.content}}</h3>
 </div>
-<!-- <a {{bind-attr href="permalink"}} class='ion-link'></a> -->
+
 {{#if showYearlyResults}}
-  <table>
+  <table class="slds-table slds-table--bordered slds-no-row-hover">
     <thead>
-      <tr>
-        <th> </th>
+      <tr class="slds-text-heading--label">
+        <th scope="col"> </th>
         {{#each year in question.yearsAsked}}
-          <th>{{year}}</th>
+          <th scope="col">
+            <div class="slds-truncate">
+              {{year}}
+            </div>
+          </th>
         {{/each}}
       </tr>
     </thead>
     <tbody>
       {{#each answer in question.answers}}
-        <tr>
-          <td>{{answer.content}}</td>
+        <tr class="slds-hint-parent">
+          <td class="slds-truncate" scope="row">{{answer.content}}</td>
 
           {{#each summary in answer.yearSummaryAnswers}}
-            <td>
+            <td class="slds-truncate" scope="row">
               {{answer-summary summary=summary}}
             </td>
           {{/each}}
