@@ -1,5 +1,9 @@
-<h1 class="slds-text-heading--large"> {{model.name}} Survey Results </h1>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="hcatlin">Tweet</a>
+<div class="slds-clearfix slds-m-bottom--large">
+  <h1 class="slds-text-heading--large slds-float--left"> {{model.name}} Survey Results </h1>
+  <div class="slds-float--right">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="hcatlin">Tweet</a>
+  </div>
+</div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 <p class="slds-m-bottom--large">
@@ -19,14 +23,14 @@
       <div id="mc_embed_signup_scroll">
         <div class="mc-field-group">
   	       <label class="slds-form-element__label" for="mce-EMAIL">Email Address:</label>
-  	       <input type="email" value="" name="EMAIL" class="slds-input required email" id="mce-EMAIL">
+  	       <input type="email" value="" name="EMAIL" class="slds-input slds-m-bottom--small required email" id="mce-EMAIL">
         </div>
         <div id="mce-responses" class="clear">
   		     <div class="response" id="mce-error-response" style="display:none"></div>
   		     <div class="response" id="mce-success-response" style="display:none"></div>
   	    </div>
         <div style="position: absolute; left: -5000px;"><input type="text" name="b_f1d50be4cecfc8844afa5879b_c16d1b497a" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="slds-button slds-button--neutral"></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="slds-button slds-button--brand"></div>
       </div>
     </form>
   </div>
@@ -41,7 +45,7 @@
 </p>
 
 {{#each year in model.years}}
-  <h2 class="slds-text-heading--medium">Questions first asked in: {{year.year}}</h2>
+  <h2 class="slds-text-heading--medium slds-m-bottom--medium">Questions first asked in: {{year.year}}</h2>
   <div class="survey-questions slds-tree_container">
     <ul class="slds-tree" role="tree" area-labelldby="treeheading">
       {{#each question in year.questions}}

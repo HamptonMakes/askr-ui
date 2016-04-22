@@ -15,9 +15,23 @@ h1, h2, h3, h4 {
   display: inline-block;
 }
 
-a {
-  color: darken($blue, 10%);
+// Making links the brand slate colour
+
+.content.slds a {
+  color: darken($blue, 30%);
   &:hover {
     color: $slate;
+  }
+}
+
+// For the subscribe button
+
+.slds.content {
+  #mc-embedded-subscribe {
+    background: $slate;
+    border-color: $slate;
+    &:hover {
+      background: lighten($slate, 5%);
+    }
   }
 }
