@@ -1,8 +1,12 @@
-<h1> {{model.name}} Survey Results </h1>
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="hcatlin">Tweet</a>
+<div class="slds-clearfix slds-m-bottom--large">
+  <h1 class="slds-text-heading--large slds-float--left"> {{model.name}} Survey Results </h1>
+  <div class="slds-float--right">
+    <a href="https://twitter.com/share" class="twitter-share-button" data-via="hcatlin">Tweet</a>
+  </div>
+</div>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
-<p>
+<p class="slds-m-bottom--large">
   These are the 2015 results from what was originally called
   "Hampton's Ruby Survey" in 2008. Figures are percentage of respondants,
   and that value is reflected in the background to each cell. The smaller
@@ -10,7 +14,7 @@
   oldest and have been asked year over year.
 </p>
 
-<p><strong>
+<p class="slds-m-bottom--large"><strong>
   If you want to sign up to get an email when we do our next survey,
   sign up to our mailing list!
   <!-- Begin MailChimp Signup Form -->
@@ -18,31 +22,37 @@
     <form action="//catlinsoftware.us3.list-manage.com/subscribe/post?u=f1d50be4cecfc8844afa5879b&amp;id=c16d1b497a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
       <div id="mc_embed_signup_scroll">
         <div class="mc-field-group">
-  	       <label for="mce-EMAIL">Email Address:</label>
-  	       <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+  	       <label class="slds-form-element__label" for="mce-EMAIL">Email Address:</label>
+  	       <input type="email" value="" name="EMAIL" class="slds-input slds-m-bottom--small required email" id="mce-EMAIL">
         </div>
         <div id="mce-responses" class="clear">
   		     <div class="response" id="mce-error-response" style="display:none"></div>
   		     <div class="response" id="mce-success-response" style="display:none"></div>
   	    </div>
         <div style="position: absolute; left: -5000px;"><input type="text" name="b_f1d50be4cecfc8844afa5879b_c16d1b497a" tabindex="-1" value=""></div>
-        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="slds-button slds-button--brand"></div>
       </div>
     </form>
   </div>
 </strong></p>
 
-<p>
-  Made with Ember, Rails, and love by the
+<p class="slds-m-bottom--large">
+  Made with <a href="http://emberjs.com/">Ember</a>, <a href="http://rubyonrails.org/">Rails</a>, the <a href="www.lightningdesignsystem.com">Salesforce Lightning Design System</a>, and love by the
   <a href="http://www.teamrarebit.com">rarebit</a> team,
   <a href="http://twitter.com/hcatlin" target="_blank">Hampton</a>
   and <a href="http://twitter.com/malrase" target="_blank">Michael</a>.
-  This is an <a href="http://github.com/teamrarebit" target="_blank">open source project.</a>
+  This is an <a href="http://github.com/teamrarebit" target="_blank">open source project</a>.
 </p>
 
 {{#each year in model.years}}
-  <h2>Questions first asked in: {{year.year}}</h2>
-  {{#each question in year.questions}}
-    {{survey-question question=question}}
-  {{/each}}
+  <h2 class="slds-text-heading--medium slds-m-bottom--medium">Questions first asked in: {{year.year}}</h2>
+  <div class="survey-questions slds-tree_container">
+    <ul class="slds-tree" role="tree" area-labelldby="treeheading">
+      {{#each question in year.questions}}
+        <li class="survey-question" role="treeitem" aria-level="1" aria-expanded="false">
+          {{survey-question question=question}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
 {{/each}}
